@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package nb;
+
+option java_package = "blog.nb";
+
+service GetData{
+    rpc GetData(GetDataRequest) returns (GetDataResponse);
+}
+
+message GetDataRequest {
+  int64 id = 1;
+}
+
+message GetDataResponse {
+  string data = 1;
+}
